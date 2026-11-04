@@ -1,14 +1,57 @@
-# Lab 06: Types Of Html Lists
+# Assignment 6: Types Of Html Lists
 
-## Contents
-- `index.html` — practical tasks, aims, theory, procedures, program/commands, expected outputs and viva questions available in the source record.
-- `style.css` — styling for the lab practical page.
-- `images/screenshot.png` — labelled preview placeholder. Replace it with your own browser screenshot after running the practical.
+## Experiment Title
+Types Of Html Lists.
 
-## How to open
-1. Open this folder in Visual Studio Code.
-2. Open `index.html`.
-3. Right-click and choose **Open with Live Server**, or open the file directly in a browser.
+## Aim
+This experiment covers the following objectives: To display three shopping items using an unordered list; To create a numbered canteen menu with a nested numbered list under Sandwich; To display two questions and their answers using a description list.
 
-## Source note
-This lab was prepared from the uploaded *HTML and CSS Lab Practical Record*. The content is kept aligned with the supplied practical record.
+## Software / Tools Required
+Computer, Git (for Assignments 1–2), a text editor (such as VS Code) and a modern web browser.
+
+## Theory
+- The ul element creates a bulleted list. Each list item is represented by li.
+- The ol element creates an ordered list. Lists can be nested by placing another ol inside an li element.
+- The dl element groups terms and descriptions. The dt element identifies a term and dd provides its description.
+
+## Task 1: Create an unordered shopping list
+
+### Algorithm / Procedure
+Create a heading and a ul containing Notebook, Pen and Bag.
+
+### Input
+Open shopping-list.html.
+
+### Output
+Three bullet points appear for Notebook, Pen and Bag.
+
+### Result
+The unordered shopping list was created successfully.
+
+## Task 2: Create an ordered list with a nested list
+
+### Algorithm / Procedure
+Add Samosa and Sandwich as ordered items; nest Cheese and Vegetable under Sandwich.
+
+### Input
+Open canteen-menu.html.
+
+### Output
+Two numbered main items appear, with two nested numbered choices under Sandwich.
+
+### Result
+A nested ordered list was created successfully.
+
+## Task 3: Create a description list for FAQs
+
+### Algorithm / Procedure
+Create two dt elements and add an answer in a dd element after each question.
+
+### Input
+Open faq.html.
+
+### Output
+Each question is followed by its answer.
+
+### Result
+A description list with two FAQ entries was created.
