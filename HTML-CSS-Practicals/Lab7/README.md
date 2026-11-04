@@ -1,14 +1,27 @@
-# Lab 07: About Me Page
+# Assignment 7: About Me Page
 
-## Contents
-- `index.html` — practical tasks, aims, theory, procedures, program/commands, expected outputs and viva questions available in the source record.
-- `style.css` — styling for the lab practical page.
-- `images/screenshot.png` — labelled preview placeholder. Replace it with your own browser screenshot after running the practical.
+## Experiment Title
+About Me Page.
 
-## How to open
-1. Open this folder in Visual Studio Code.
-2. Open `index.html`.
-3. Right-click and choose **Open with Live Server**, or open the file directly in a browser.
+## Aim
+This experiment covers the following objectives: To create a page with header navigation, an about section and a contact footer.
 
-## Source note
-This lab was prepared from the uploaded *HTML and CSS Lab Practical Record*. The content is kept aligned with the supplied practical record.
+## Software / Tools Required
+Computer, Git (for Assignments 1–2), a text editor (such as VS Code) and a modern web browser.
+
+## Theory
+- Semantic HTML elements such as header, nav, main, section and footer describe the purpose of page regions. Fragment links use an element id as their destination.
+
+## Task 1: Build a semantic About Me page
+
+### Algorithm / Procedure
+Create header with heading and two navigation links; add main section id about; add footer id contact with a mailto link.
+
+### Input
+Open about-me.html; use the About and Contact navigation links.
+
+### Output
+The page shows a heading and two navigation links; About jumps to the section and Contact jumps to the footer email link.
+
+### Result
+A semantic About Me page with in-page navigation and a mailto link was created.
