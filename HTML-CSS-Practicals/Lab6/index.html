@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 6 - Types Of Html Lists</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 06: Types Of Html Lists</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 6</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create an unordered shopping list</h2>
+  <p class="meta"><strong>Aim:</strong> To display three shopping items using an unordered list.</p>
+  <p class="meta"><strong>Theory:</strong> The ul element creates a bulleted list. Each list item is represented by li.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a heading and a ul containing Notebook, Pen and Bag.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Shopping List&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Shopping List&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Notebook&lt;/li&gt;&lt;li&gt;Pen&lt;/li&gt;&lt;li&gt;Bag&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Three bullet points appear for Notebook, Pen and Bag.</div>
+  <p class="meta"><strong>Result:</strong> The unordered shopping list was created successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is ul?</li><li>Which element represents a list item?</li><li>How does ul differ from ol?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Create an ordered list with a nested list</h2>
+  <p class="meta"><strong>Aim:</strong> To create a numbered canteen menu with a nested numbered list under Sandwich.</p>
+  <p class="meta"><strong>Theory:</strong> The ol element creates an ordered list. Lists can be nested by placing another ol inside an li element.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add Samosa and Sandwich as ordered items; nest Cheese and Vegetable under Sandwich.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Canteen Menu&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Canteen Menu&lt;/h1&gt;&lt;ol&gt;&lt;li&gt;Samosa&lt;/li&gt;&lt;li&gt;Sandwich&lt;ol&gt;&lt;li&gt;Cheese&lt;/li&gt;&lt;li&gt;Vegetable&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Two numbered main items appear, with two nested numbered choices under Sandwich.</div>
+  <p class="meta"><strong>Result:</strong> A nested ordered list was created successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is ol?</li><li>How is a nested list created?</li><li>Can an ordered list contain another ordered list?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Create a description list for FAQs</h2>
+  <p class="meta"><strong>Aim:</strong> To display two questions and their answers using a description list.</p>
+  <p class="meta"><strong>Theory:</strong> The dl element groups terms and descriptions. The dt element identifies a term and dd provides its description.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create two dt elements and add an answer in a dd element after each question.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Library FAQ&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Library FAQ&lt;/h1&gt;&lt;dl&gt;&lt;dt&gt;How many books can I borrow?&lt;/dt&gt;&lt;dd&gt;You can borrow up to three books at a time.&lt;/dd&gt;&lt;dt&gt;Is the library open on Sunday?&lt;/dt&gt;&lt;dd&gt;The library remains closed on Sunday.&lt;/dd&gt;&lt;/dl&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Each question is followed by its answer.</div>
+  <p class="meta"><strong>Result:</strong> A description list with two FAQ entries was created.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is dl?</li><li>What is the role of dt?</li><li>What is the role of dd?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 06</footer>
+</body></html>

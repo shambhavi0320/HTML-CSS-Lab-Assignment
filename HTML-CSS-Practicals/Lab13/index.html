@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 13 - Flexbox Layouts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 13: Flexbox Layouts</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 13</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create a horizontal navigation bar with Flexbox</h2>
+  <p class="meta"><strong>Aim:</strong> To arrange four navigation links horizontally using display:flex.</p>
+  <p class="meta"><strong>Theory:</strong> Flexbox is a one-dimensional layout model. `display:flex` creates a flex container whose direct children become flex items.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a nav element with four links; use display:flex, dark background and white link text.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Flex Navigation&lt;/title&gt;&lt;style&gt;nav{display:flex;gap:28px;background:#1d3557;padding:18px}nav a{color:white;text-decoration:none;font-family:Arial,sans-serif}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;nav&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;a href=&quot;#events&quot;&gt;Events&lt;/a&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> A dark horizontal bar displays four white links side by side.</div>
+  <p class="meta"><strong>Result:</strong> A horizontal navigation bar was arranged using Flexbox.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is Flexbox?</li><li>What does display:flex do?</li><li>What is a flex item?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Center three cards using Flexbox</h2>
+  <p class="meta"><strong>Aim:</strong> To place three pricing cards in one row and center them using justify-content and align-items.</p>
+  <p class="meta"><strong>Theory:</strong> `justify-content` aligns flex items along the main axis; `align-items` aligns them along the cross axis.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a row container and three cards with the specified names and prices; apply Flexbox centering.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Centered Cards&lt;/title&gt;&lt;style&gt;.row{display:flex;justify-content:center;align-items:center;gap:18px;min-height:260px;flex-wrap:wrap}.card{width:150px;padding:18px;text-align:center;background:#eaf4f4;border:1px solid #457b9d;border-radius:10px}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Plans&lt;/h1&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Starter&lt;/h3&gt;&lt;p&gt;₹199&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Standard&lt;/h3&gt;&lt;p&gt;₹349&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Premium&lt;/h3&gt;&lt;p&gt;₹499&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Starter, Standard and Premium cards appear centered in one row when sufficient width is available.</div>
+  <p class="meta"><strong>Result:</strong> Three cards were centered using Flexbox alignment properties.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is the main axis?</li><li>What does justify-content do?</li><li>What does align-items do?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Create a wrapping Flexbox card row</h2>
+  <p class="meta"><strong>Aim:</strong> To display four stationery product cards that wrap onto additional rows on narrow screens.</p>
+  <p class="meta"><strong>Theory:</strong> The flex-wrap property controls whether flex items remain on one line or wrap onto multiple lines when space is limited.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create four cards with the specified product names and prices; set display:flex and flex-wrap:wrap.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Stationery Shop&lt;/title&gt;&lt;style&gt;.products{display:flex;flex-wrap:wrap;gap:14px}.card{flex:1 1 180px;padding:20px;background:#f1f5f9;border:1px solid #94a3b8;border-radius:10px}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Stationery Shop&lt;/h1&gt;&lt;div class=&quot;products&quot;&gt;&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Notebook&lt;/h2&gt;&lt;p&gt;₹60&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Pen&lt;/h2&gt;&lt;p&gt;₹15&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Bag&lt;/h2&gt;&lt;p&gt;₹350&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Book&lt;/h2&gt;&lt;p&gt;₹120&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Cards occupy one or more rows depending on available width.</div>
+  <p class="meta"><strong>Result:</strong> A responsive wrapping card layout was created with flex-wrap.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does flex-wrap do?</li><li>What is flex-basis?</li><li>How does a flex container respond to limited width?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 13</footer>
+</body></html>

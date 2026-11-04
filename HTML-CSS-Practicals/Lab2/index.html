@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 2 - Pushing And Cloning A Repository</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 02: Pushing And Cloning A Repository</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 2</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create and inspect a bare remote repository</h2>
+  <p class="meta"><strong>Aim:</strong> To create a bare repository and add it as the origin remote.</p>
+  <p class="meta"><strong>Theory:</strong> A bare repository stores Git data without a working directory and is commonly used as a remote. `git remote -v` lists remote URLs for fetch and push.</p>
+  <p class="meta"><strong>Procedure:</strong> e From html-lab, create ../html-remote as a bare repository; add origin; inspect remotes.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>git init --bare ../html-remote
+git remote add origin ../html-remote
+git remote -v</code></pre>
+  <div class="output"><strong>Expected output:</strong> The output lists origin with the same path for fetch and push.</div>
+  <p class="meta"><strong>Result:</strong> A bare remote repository was created and connected as origin.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is a bare repository?</li><li>What is origin?</li><li>What does git remote -v show?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Push commits to the remote repository</h2>
+  <p class="meta"><strong>Aim:</strong> To transfer local commits to the configured remote repository.</p>
+  <p class="meta"><strong>Theory:</strong> `git push` sends local commits to a remote branch. The branch may be named main or master depending on repository configuration.</p>
+  <p class="meta"><strong>Procedure:</strong> e Check the current branch; push it to origin using the matching branch name.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>git branch --show-current
+# If the branch is main:
+git push origin main
+# If the branch is master, use instead:
+git push origin master</code></pre>
+  <div class="output"><strong>Expected output:</strong> Git confirms that the local branch was pushed to the corresponding remote branch.</div>
+  <p class="meta"><strong>Result:</strong> The local commit history was pushed successfully to origin.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does git push do?</li><li>What is a branch?</li><li>Why might a repository use main or master?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Clone the remote repository</h2>
+  <p class="meta"><strong>Aim:</strong> To create a working copy by cloning the remote repository and inspect its history.</p>
+  <p class="meta"><strong>Theory:</strong> `git clone` copies a repository, including its commit history, into a new directory.</p>
+  <p class="meta"><strong>Procedure:</strong> e Move to the parent directory; clone html-remote into html-copy; enter it; view the log.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>cd ..
+git clone html-remote html-copy
+cd html-copy
+git log --oneline</code></pre>
+  <div class="output"><strong>Expected output:</strong> The cloned repository shows the same commits as the source repository.</div>
+  <p class="meta"><strong>Result:</strong> The remote repository was cloned and its commit history was verified.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does git clone do?</li><li>Does cloning copy commit history?</li><li>What is a working directory?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 02</footer>
+</body></html>

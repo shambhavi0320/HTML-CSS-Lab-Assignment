@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 8 - Sign-Up Forms And Choices</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 08: Sign-Up Forms And Choices</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 8</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create a labelled sign-up form</h2>
+  <p class="meta"><strong>Aim:</strong> To create a POST form with labelled full-name, email and password fields.</p>
+  <p class="meta"><strong>Theory:</strong> The form element groups controls. Labels improve usability and accessibility when their for attribute matches the input id. Password inputs conceal typed characters.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create form with method post and action thanks.html; add three associated labels and inputs.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Sign Up&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Create an Account&lt;/h1&gt;&lt;form method=&quot;post&quot; action=&quot;thanks.html&quot;&gt;
+&lt;label for=&quot;full-name&quot;&gt;Full name&lt;/label&gt;&lt;input id=&quot;full-name&quot; name=&quot;fullName&quot; type=&quot;text&quot;&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;&lt;input id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot;&gt;&lt;br&gt;&lt;br&gt;
+&lt;button type=&quot;submit&quot;&gt;Sign Up&lt;/button&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Three labelled fields appear. Password characters are masked while typing.</div>
+  <p class="meta"><strong>Result:</strong> A sign-up form with correctly associated labels and input types was created.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does method=&quot;post&quot; mean?</li><li>Why connect label and input?</li><li>What does type=&quot;password&quot; do?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Add radio buttons and a course dropdown</h2>
+  <p class="meta"><strong>Aim:</strong> To create two gender radio choices and a course dropdown with BCA and B.Tech.</p>
+  <p class="meta"><strong>Theory:</strong> Radio inputs with the same name form a mutually exclusive group. The select element creates a dropdown and option defines each choice.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a gender fieldset with two radio inputs sharing a name; add a select with two options.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Choices&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Choose Your Details&lt;/h1&gt;&lt;form&gt;&lt;fieldset&gt;&lt;legend&gt;Gender&lt;/legend&gt;
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Female&quot;&gt; Female&lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Male&quot;&gt; Male&lt;/label&gt;
+&lt;/fieldset&gt;&lt;br&gt;&lt;label for=&quot;course&quot;&gt;Course&lt;/label&gt;
+&lt;select id=&quot;course&quot; name=&quot;course&quot;&gt;&lt;option value=&quot;BCA&quot;&gt;BCA&lt;/option&gt;&lt;option value=&quot;B.Tech&quot;&gt;B.Tech&lt;/option&gt;&lt;/select&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Only one radio option can be selected at a time; the dropdown contains BCA and B.Tech.</div>
+  <p class="meta"><strong>Result:</strong> Radio choices and a course dropdown were implemented successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>Why do radio buttons share a name?</li><li>Which element creates a dropdown?</li><li>What does option define?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Use required fields and a placeholder</h2>
+  <p class="meta"><strong>Aim:</strong> To make full-name and email fields mandatory and provide a placeholder for the name field.</p>
+  <p class="meta"><strong>Theory:</strong> The required attribute triggers browser validation before form submission. A placeholder gives a short input hint but does not replace a label.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create full-name and email inputs; add required to both; add a name placeholder and submit button.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Required Sign Up&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Quick Sign Up&lt;/h1&gt;&lt;form action=&quot;#&quot;&gt;
+&lt;label for=&quot;name&quot;&gt;Full name&lt;/label&gt;&lt;input id=&quot;name&quot; name=&quot;name&quot; type=&quot;text&quot; placeholder=&quot;Enter your full name&quot; required&gt;&lt;br&gt;&lt;br&gt;
+&lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; required&gt;&lt;br&gt;&lt;br&gt;
+&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The browser displays a validation prompt when a required field is empty.</div>
+  <p class="meta"><strong>Result:</strong> Required validation and a placeholder were added to the sign-up form.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does required do?</li><li>What is a placeholder?</li><li>Does placeholder replace a label?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 08</footer>
+</body></html>

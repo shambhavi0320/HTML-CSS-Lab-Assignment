@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 10 - Css Fundamentals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 10: Css Fundamentals</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 10</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Apply inline and internal CSS</h2>
+  <p class="meta"><strong>Aim:</strong> To demonstrate internal CSS for h1 and highlight class and inline CSS for a paragraph.</p>
+  <p class="meta"><strong>Theory:</strong> CSS controls presentation. Internal CSS is written in a style element; inline CSS is written in an element style attribute.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add internal rules for h1 and .highlight; add an inline red paragraph style; open the page.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;CSS Methods&lt;/title&gt;&lt;style&gt;h1{color:navy}.highlight{background-color:yellow}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;CSS Fundamentals&lt;/h1&gt;&lt;p style=&quot;color:red&quot;&gt;This paragraph uses inline CSS.&lt;/p&gt;&lt;p class=&quot;highlight&quot;&gt;This paragraph uses the highlight class.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The heading is navy, the inline paragraph is red and the highlighted paragraph has a yellow background.</div>
+  <p class="meta"><strong>Result:</strong> Inline and internal CSS were applied successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is inline CSS?</li><li>Where is internal CSS written?</li><li>What is a class selector?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Write CSS rules using element, class and id selectors</h2>
+  <p class="meta"><strong>Aim:</strong> To style h1, .note, #title and all paragraph elements in an external stylesheet.</p>
+  <p class="meta"><strong>Theory:</strong> A type selector targets elements by tag name; a class selector begins with a dot; an id selector begins with #. External CSS is reusable across pages.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create style.css and add the four required selector rules.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>h1 { color: navy; }
+.note { font-style: italic; }
+#title { text-decoration: underline; }
+p { font-size: 18px; color: grey; }</code></pre>
+  <div class="output"><strong>Expected output:</strong> When linked, h1 is navy, note text is italic, title is underlined, and paragraphs are 18px grey.</div>
+  <p class="meta"><strong>Result:</strong> The requested CSS selectors and text styles were defined.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is a type selector?</li><li>How is a class selector written?</li><li>How is an id selector written?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Link an external CSS file</h2>
+  <p class="meta"><strong>Aim:</strong> To link style.css to an HTML page and apply its rules to selected elements.</p>
+  <p class="meta"><strong>Theory:</strong> The link element with rel=&quot;stylesheet&quot; connects an external CSS file. The href path must point to the stylesheet location.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create linked.html; link style.css in head; add h1 id title and two paragraphs class note.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;External CSS&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1 id=&quot;title&quot;&gt;External Stylesheet&lt;/h1&gt;&lt;p class=&quot;note&quot;&gt;CSS keeps presentation separate from structure.&lt;/p&gt;&lt;p class=&quot;note&quot;&gt;One stylesheet can style many elements.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The heading and paragraphs display the styles defined in style.css.</div>
+  <p class="meta"><strong>Result:</strong> The external stylesheet was linked and applied successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is external CSS?</li><li>What does rel=&quot;stylesheet&quot; mean?</li><li>What happens if the CSS path is incorrect?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 10</footer>
+</body></html>

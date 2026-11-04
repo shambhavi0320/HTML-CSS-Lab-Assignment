@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 5 - Links And Images</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 05: Links And Images</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 5</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create a home page link to a portfolio</h2>
+  <p class="meta"><strong>Aim:</strong> To create a home page containing a link to portfolio.html.</p>
+  <p class="meta"><strong>Theory:</strong> The anchor element creates hyperlinks. Its href attribute specifies the destination URL or file path.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create home.html with the heading and a paragraph containing the portfolio link.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Home&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Welcome to My Site&lt;/h1&gt;&lt;p&gt;Visit my &lt;a href=&quot;portfolio.html&quot;&gt;portfolio&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The word portfolio is displayed as a clickable link to portfolio.html.</div>
+  <p class="meta"><strong>Result:</strong> A working relative link to the portfolio page was added.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>Which element creates a link?</li><li>What is href?</li><li>What is a relative URL?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Create a portfolio page with a return link</h2>
+  <p class="meta"><strong>Aim:</strong> To create a portfolio page with a heading and a link back to home.html.</p>
+  <p class="meta"><strong>Theory:</strong> A relative hyperlink can navigate between files in the same folder.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create portfolio.html; add a heading and an anchor pointing to home.html.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Portfolio&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;My Portfolio&lt;/h1&gt;&lt;p&gt;Explore my learning projects and practice work.&lt;/p&gt;&lt;a href=&quot;home.html&quot;&gt;Back to Home&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The portfolio page appears and its link returns to home.html.</div>
+  <p class="meta"><strong>Result:</strong> The two pages are connected using relative links.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>How do you link two local pages?</li><li>What does href contain?</li><li>What is a relative path?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Display an image with dimensions and alt text</h2>
+  <p class="meta"><strong>Aim:</strong> To display an image from the images folder with dimensions 200 by 200 and descriptive alternative text.</p>
+  <p class="meta"><strong>Theory:</strong> The img element embeds an image. The src attribute identifies the image file, alt provides text alternative, and width and height set dimensions.</p>
+  <p class="meta"><strong>Procedure:</strong> e Use the included sample illustration in images; set width and height to 200; add descriptive alt text.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Portfolio Image&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Portfolio Image&lt;/h1&gt;&lt;img src=&quot;images/sample-portfolio.svg&quot; width=&quot;200&quot; height=&quot;200&quot; alt=&quot;Illustration of a person representing a portfolio profile&quot;&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> A 200 by 200 sample illustration appears under the heading.</div>
+  <p class="meta"><strong>Result:</strong> An image was embedded with dimensions and descriptive alt text.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does src specify?</li><li>Why is alt text important?</li><li>Which attributes set image dimensions?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 05</footer>
+</body></html>

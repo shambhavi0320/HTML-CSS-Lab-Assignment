@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 15 - Responsive Pages With Media Queries</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 15: Responsive Pages With Media Queries</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 15</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create a mobile-first two-card layout</h2>
+  <p class="meta"><strong>Aim:</strong> To stack two cards on small screens and place them side by side at 600px and above.</p>
+  <p class="meta"><strong>Theory:</strong> A mobile-first design starts with styles for small screens and uses min-width media queries to enhance layouts for wider screens. The viewport meta tag helps pages scale correctly on mobile devices.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add viewport meta; define stacked cards as base styles; add a min-width:600px media query for two columns.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Mobile First&lt;/title&gt;&lt;style&gt;.cards{display:grid;grid-template-columns:1fr;gap:14px}.card{padding:20px;background:#eaf4f4;border:1px solid #457b9d;border-radius:10px}@media (min-width:600px){.cards{grid-template-columns:1fr 1fr}}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Responsive Cards&lt;/h1&gt;&lt;div class=&quot;cards&quot;&gt;&lt;section class=&quot;card&quot;&gt;&lt;h2&gt;Card One&lt;/h2&gt;&lt;p&gt;This is the first content card.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;card&quot;&gt;&lt;h2&gt;Card Two&lt;/h2&gt;&lt;p&gt;This is the second content card.&lt;/p&gt;&lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> On narrow screens cards stack; at 600px and above they appear side by side.</div>
+  <p class="meta"><strong>Result:</strong> A mobile-first responsive card layout was implemented using a media query.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is mobile-first design?</li><li>What does min-width mean in a media query?</li><li>Why use the viewport meta tag?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Make an image responsive</h2>
+  <p class="meta"><strong>Aim:</strong> To make an image shrink to fit its container while maintaining its aspect ratio.</p>
+  <p class="meta"><strong>Theory:</strong> `max-width:100%` prevents an image from exceeding its parent width. `height:auto` preserves the image aspect ratio as width changes.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add a heading and the included sample image; apply max-width:100% and height:auto.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Responsive Image&lt;/title&gt;&lt;style&gt;img{max-width:100%;height:auto;display:block;border-radius:12px}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Responsive Image&lt;/h1&gt;&lt;img src=&quot;images/sample-portfolio.svg&quot; alt=&quot;Illustration of a person representing a portfolio profile&quot;&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The image scales down to fit a narrow container and preserves its proportions.</div>
+  <p class="meta"><strong>Result:</strong> A responsive image was created using max-width and automatic height.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does max-width:100% do?</li><li>Why use height:auto?</li><li>What is an image aspect ratio?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Change heading size with a media query</h2>
+  <p class="meta"><strong>Aim:</strong> To set base text sizes in rem and enlarge the h1 at viewport widths of 600px and above.</p>
+  <p class="meta"><strong>Theory:</strong> The rem unit is relative to the root font size. Media queries apply CSS only when their conditions match the viewport or device.</p>
+  <p class="meta"><strong>Procedure:</strong> e Set body font-size to 1rem and h1 to 1.5rem; add min-width:600px rule setting h1 to 2.5rem.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Responsive Text&lt;/title&gt;&lt;style&gt;body{font-size:1rem;font-family:Arial,sans-serif}h1{font-size:1.5rem}@media (min-width:600px){h1{font-size:2.5rem}}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Responsive Typography&lt;/h1&gt;&lt;p&gt;The heading changes size when the viewport reaches 600 pixels.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The heading is 1.5rem on narrow screens and 2.5rem at 600px and above.</div>
+  <p class="meta"><strong>Result:</strong> Responsive heading typography was implemented with rem units and a media query.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is rem?</li><li>What is a media query?</li><li>What does min-width:600px mean?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 15</footer>
+</body></html>

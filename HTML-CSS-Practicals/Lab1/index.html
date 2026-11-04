@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 1 - Starting A Git Repository</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 01: Starting A Git Repository</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 1</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Configure Git for the lab repository</h2>
+  <p class="meta"><strong>Aim:</strong> To create a lab folder, initialize Git, and configure repository-specific identity.</p>
+  <p class="meta"><strong>Theory:</strong> Git is a distributed version-control system. A repository stores project history. `git config --local` writes identity settings only to the current repository.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create `html-lab`; enter it; run `git init`; set local user.name and user.email; display both values.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>mkdir html-lab
+cd html-lab
+git init
+git config --local user.name &quot;Student&quot;
+git config --local user.email &quot;student@example.com&quot;
+git config user.name
+git config user.email</code></pre>
+  <div class="output"><strong>Expected output:</strong> Git initializes an empty repository and prints the configured name and email.</div>
+  <p class="meta"><strong>Result:</strong> The repository was initialized and local Git identity was configured successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is Git?</li><li>What does git init do?</li><li>What is the purpose of --local?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Create and commit the home page</h2>
+  <p class="meta"><strong>Aim:</strong> To create an HTML file, inspect its status, stage it and save it in Git history.</p>
+  <p class="meta"><strong>Theory:</strong> Git tracks changes in the working tree. `git add` stages changes and `git commit` records the staged snapshot.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create index.html; check status; stage the file; commit with the required message.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>cat &gt; index.html &lt;&lt;&#x27;EOF&#x27;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Home&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Welcome to the HTML Lab&lt;/h1&gt;&lt;/body&gt;
+&lt;/html&gt;
+EOF
+git status
+git add index.html
+git commit -m &quot;Add home page&quot;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The status first shows index.html as untracked; after staging and committing, Git reports one file changed.</div>
+  <p class="meta"><strong>Result:</strong> The home page was added to the repository in a commit.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is the staging area?</li><li>What does git status display?</li><li>Why are commit messages useful?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Add a heading and inspect commit history</h2>
+  <p class="meta"><strong>Aim:</strong> To update the HTML page, create a second commit and view the concise history.</p>
+  <p class="meta"><strong>Theory:</strong> A commit represents a saved project state. `git log --oneline` displays abbreviated commit identifiers and messages.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add an h2 below the h1; save; stage and commit; display the log.</p>
+  <h3>Program / Commands</h3>
+  <pre><code># Add this line below the h1 in index.html:
+&lt;h2&gt;Next Lab Meeting&lt;/h2&gt;
+ 
+git add index.html
+git commit -m &quot;Add next meeting heading&quot;
+git log --oneline</code></pre>
+  <div class="output"><strong>Expected output:</strong> The log lists two commits, with the newest commit first.</div>
+  <p class="meta"><strong>Result:</strong> The second change was committed and the repository history was displayed.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is a commit?</li><li>What does --oneline do?</li><li>Which commit appears first in git log?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 01</footer>
+</body></html>

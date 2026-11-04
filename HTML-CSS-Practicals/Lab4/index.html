@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 4 - Divs, Attributes And A Small Fix</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 04: Divs, Attributes And A Small Fix</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 4</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Group page regions using div elements</h2>
+  <p class="meta"><strong>Aim:</strong> To group page content into header, main and footer blocks.</p>
+  <p class="meta"><strong>Theory:</strong> The div element is a generic block container. Class attributes identify groups of elements for styling or scripting.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create three div elements and assign the required classes.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Layout Blocks&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;header&quot;&gt;Website Header&lt;/div&gt;
+  &lt;div class=&quot;main&quot;&gt;Main content goes here.&lt;/div&gt;
+  &lt;div class=&quot;footer&quot;&gt;Website Footer&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Three text blocks appear in header, main and footer order.</div>
+  <p class="meta"><strong>Result:</strong> The page content was grouped into three div blocks.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is a div?</li><li>What is a class attribute?</li><li>Can multiple elements share a class?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Use id and custom data attributes</h2>
+  <p class="meta"><strong>Aim:</strong> To create a div with id profile and a paragraph with data-topic=&quot;hobbies&quot;.</p>
+  <p class="meta"><strong>Theory:</strong> The id attribute uniquely identifies an element in a document. Custom data attributes begin with `data-` and store page-specific information.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create the profile div; place a paragraph inside it; add the required data attribute.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Attributes&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;profile&quot;&gt;
+    &lt;p data-topic=&quot;hobbies&quot;&gt;Reading, music and photography are my hobbies.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The paragraph text is visible. The data-topic value is stored in the element and is not displayed automatically.</div>
+  <p class="meta"><strong>Result:</strong> The id and custom data attribute were applied successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is the purpose of id?</li><li>What prefix is used for custom data attributes?</li><li>Are data attributes automatically visible?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Correct errors in an HTML page</h2>
+  <p class="meta"><strong>Aim:</strong> To correct malformed heading and paragraph tags in the attendance report.</p>
+  <p class="meta"><strong>Theory:</strong> HTML elements should be properly opened and closed. Correct nesting and closing tags help browsers interpret document structure consistently.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add the missing closing h1 tag; correct the second p opening tag; save the corrected page.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Attendance&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Attendance Report&lt;/h1&gt;
+  &lt;p&gt;Asha: 92%&lt;/p&gt;
+  &lt;p&gt;Rohan: 85%&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The page shows the Attendance Report heading and two separate attendance lines.</div>
+  <p class="meta"><strong>Result:</strong> The malformed HTML was corrected and the attendance report displays properly.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>Why should HTML tags be closed?</li><li>What is proper nesting?</li><li>Which tag represents a paragraph?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 04</footer>
+</body></html>

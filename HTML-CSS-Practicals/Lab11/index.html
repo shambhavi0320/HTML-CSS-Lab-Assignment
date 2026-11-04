@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 11 - Units And Css Variables</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 11: Units And Css Variables</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 11</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Use px, percentage and rem units</h2>
+  <p class="meta"><strong>Aim:</strong> To compare fixed and relative CSS units by creating two boxes and larger paragraph text.</p>
+  <p class="meta"><strong>Theory:</strong> px is a fixed CSS length unit; % is relative to a containing block; rem is relative to the root element font size.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a 200px by 40px box, a 50% by 40px box and a paragraph with 1.5rem font size.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;CSS Units&lt;/title&gt;&lt;style&gt;.fixed{width:200px;height:40px;background:#457b9d;margin:10px 0}.half{width:50%;height:40px;background:#a8dadc;margin:10px 0}p{font-size:1.5rem}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;CSS Units&lt;/h1&gt;&lt;div class=&quot;fixed&quot;&gt;200px wide&lt;/div&gt;&lt;div class=&quot;half&quot;&gt;50% wide&lt;/div&gt;&lt;p&gt;This paragraph uses 1.5rem text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The first box is 200px wide; the second occupies half its container; paragraph text is larger.</div>
+  <p class="meta"><strong>Result:</strong> The px, percentage and rem units were demonstrated.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is px?</li><li>What is percentage width relative to?</li><li>What does rem depend on?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Define and use CSS custom properties</h2>
+  <p class="meta"><strong>Aim:</strong> To define three CSS variables in :root and use them for page colour, padding and heading colour.</p>
+  <p class="meta"><strong>Theory:</strong> CSS custom properties are declared with a `--` prefix and accessed using var(). Defining variables in :root makes them available throughout the document.</p>
+  <p class="meta"><strong>Procedure:</strong> e Declare --main-color, --accent-color and --page-padding in :root; apply them to body and h1.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;CSS Variables&lt;/title&gt;&lt;style&gt;:root{--main-color:#1d3557;--accent-color:#e63946;--page-padding:20px}body{color:var(--main-color);padding:var(--page-padding);font-family:Arial,sans-serif}h1{color:var(--accent-color)}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Reusable CSS Variables&lt;/h1&gt;&lt;p&gt;This text uses the main colour and page spacing from custom properties.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The heading uses accent red; body text uses the main navy colour and page padding is 20px.</div>
+  <p class="meta"><strong>Result:</strong> CSS variables were declared and reused with var().</p>
+  <h3>Viva-Voce Questions</h3><ul><li>How are CSS variables named?</li><li>What does :root select?</li><li>How do you use a CSS variable?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Create reusable design tokens in CSS</h2>
+  <p class="meta"><strong>Aim:</strong> To define primary colour, accent colour, heading size and spacing tokens and apply them to page styles.</p>
+  <p class="meta"><strong>Theory:</strong> Design tokens are reusable values stored as custom properties. They make design updates consistent and reduce repeated literal values.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create tokens.css with the four specified variables; use them for body colour and padding and h1 colour and size.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>:root {
+  --primary-color: #1d3557;
+  --accent-color: #e63946;
+  --heading-size: 2rem;
+  --spacing: 16px;
+}
+body { color: var(--primary-color); padding: var(--spacing); }
+h1 { color: var(--accent-color); font-size: var(--heading-size); }</code></pre>
+  <div class="output"><strong>Expected output:</strong> The linked page uses navy body text, 16px padding, red h1 text and a 2rem heading size.</div>
+  <p class="meta"><strong>Result:</strong> Reusable CSS design tokens were defined and applied.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is a design token?</li><li>Why use custom properties?</li><li>What does var() do?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 11</footer>
+</body></html>

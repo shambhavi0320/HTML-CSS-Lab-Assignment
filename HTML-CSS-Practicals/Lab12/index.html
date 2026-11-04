@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 12 - Box Model, Cards And Scrolling</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 12: Box Model, Cards And Scrolling</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 12</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Compare content-box and border-box</h2>
+  <p class="meta"><strong>Aim:</strong> To compare two boxes with equal width, padding and border but different box-sizing values.</p>
+  <p class="meta"><strong>Theory:</strong> In content-box, declared width applies to content and padding/border are added outside. In border-box, declared width includes content, padding and border.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create two div boxes with width 200px, padding 20px and border 5px; apply different box-sizing values.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Box Model&lt;/title&gt;&lt;style&gt;.box{width:200px;padding:20px;border:5px solid #1d3557;margin:16px;background:#dbeafe}.content{box-sizing:content-box}.border{box-sizing:border-box}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;CSS Box Model&lt;/h1&gt;&lt;div class=&quot;box content&quot;&gt;content-box&lt;/div&gt;&lt;div class=&quot;box border&quot;&gt;border-box&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The content-box element has a larger outer width than the border-box element.</div>
+  <p class="meta"><strong>Result:</strong> The effect of the two box-sizing values was demonstrated.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What are the four parts of the box model?</li><li>What does content-box include in width?</li><li>What does border-box include in width?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Style a card component</h2>
+  <p class="meta"><strong>Aim:</strong> To create a card with background colour, 2px border, 12px rounded corners and 16px padding.</p>
+  <p class="meta"><strong>Theory:</strong> A card is a common UI component used to group related content. CSS background, border, border-radius and padding control its appearance and spacing.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a div with class card; place an h3 and paragraph inside; apply the specified styles.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Card Component&lt;/title&gt;&lt;style&gt;.card{max-width:320px;background:#eaf4f4;border:2px solid #457b9d;border-radius:12px;padding:16px;font-family:Arial,sans-serif}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Learning Card&lt;/h3&gt;&lt;p&gt;This card groups a heading and a short description in one neat component.&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> A coloured card appears with a 2px border, rounded corners and internal spacing.</div>
+  <p class="meta"><strong>Result:</strong> A styled card component was created successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does padding control?</li><li>What does border-radius do?</li><li>Why group content in a card?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Create a scrollable content box</h2>
+  <p class="meta"><strong>Aim:</strong> To create a fixed-height box with automatic overflow scrolling and five paragraphs.</p>
+  <p class="meta"><strong>Theory:</strong> The overflow property controls content that exceeds an element’s box. `overflow: auto` adds scrollbars when content requires them.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a 120px-high div; set overflow:auto; add five paragraph lines.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Scrollable Box&lt;/title&gt;&lt;style&gt;.scroll-box{height:120px;overflow:auto;border:2px solid #1d3557;padding:10px;width:280px}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Scrollable Content&lt;/h1&gt;&lt;div class=&quot;scroll-box&quot;&gt;&lt;p&gt;Line 1&lt;/p&gt;&lt;p&gt;Line 2&lt;/p&gt;&lt;p&gt;Line 3&lt;/p&gt;&lt;p&gt;Line 4&lt;/p&gt;&lt;p&gt;Line 5&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The fixed-height box displays a scrollbar because the five lines exceed its height.</div>
+  <p class="meta"><strong>Result:</strong> A scrollable box was created using overflow:auto.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does overflow control?</li><li>What does overflow:auto do?</li><li>Why set a fixed height?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 12</footer>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 14 - Css Grid Layouts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 14: Css Grid Layouts</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 14</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create a three-column CSS Grid</h2>
+  <p class="meta"><strong>Aim:</strong> To arrange six numbered boxes in three equal columns with a 12px gap.</p>
+  <p class="meta"><strong>Theory:</strong> CSS Grid is a two-dimensional layout system. `grid-template-columns` defines column tracks and the fr unit distributes available space proportionally.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create six div boxes; set display:grid; define three 1fr columns and 12px gap.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;First Grid&lt;/title&gt;&lt;style&gt;.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid div{padding:28px;text-align:center;background:#dbeafe;border:1px solid #457b9d;font-size:24px}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Three-Column Grid&lt;/h1&gt;&lt;div class=&quot;grid&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Six boxes appear in two rows with three equal columns and 12px gaps.</div>
+  <p class="meta"><strong>Result:</strong> A three-column CSS Grid was created successfully.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is CSS Grid?</li><li>What does 1fr mean?</li><li>What does gap control?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Create a responsive photo gallery grid</h2>
+  <p class="meta"><strong>Aim:</strong> To create six gallery boxes using auto-fill and minmax for responsive columns.</p>
+  <p class="meta"><strong>Theory:</strong> `repeat()` avoids repeating track definitions. `auto-fill` creates as many tracks as fit; `minmax()` sets a minimum and maximum track size.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a heading and six labelled boxes; use repeat(auto-fill,minmax(150px,1fr)) and 10px gap.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Club Photo Gallery&lt;/title&gt;&lt;style&gt;.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.photo{min-height:110px;display:grid;place-items:center;background:#e0e7ff;border:1px solid #818cf8;border-radius:8px}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Club Photo Gallery&lt;/h1&gt;&lt;div class=&quot;gallery&quot;&gt;&lt;div class=&quot;photo&quot;&gt;Photo 1&lt;/div&gt;&lt;div class=&quot;photo&quot;&gt;Photo 2&lt;/div&gt;&lt;div class=&quot;photo&quot;&gt;Photo 3&lt;/div&gt;&lt;div class=&quot;photo&quot;&gt;Photo 4&lt;/div&gt;&lt;div class=&quot;photo&quot;&gt;Photo 5&lt;/div&gt;&lt;div class=&quot;photo&quot;&gt;Photo 6&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> More boxes fit in each row as the viewport becomes wider; each track remains at least 150px wide.</div>
+  <p class="meta"><strong>Result:</strong> A responsive gallery layout was created using CSS Grid functions.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does repeat() do?</li><li>What does minmax() define?</li><li>What is auto-fill?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Build a dashboard using named grid areas</h2>
+  <p class="meta"><strong>Aim:</strong> To create a two-column dashboard with header and footer spanning both columns.</p>
+  <p class="meta"><strong>Theory:</strong> The grid-template-areas property names regions of a grid. Each string row describes the placement of named areas.</p>
+  <p class="meta"><strong>Procedure:</strong> e Define 200px and 1fr columns; name header, sidebar, main and footer areas; assign each element.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Dashboard Areas&lt;/title&gt;&lt;style&gt;.dashboard{display:grid;grid-template-columns:200px 1fr;grid-template-areas:&quot;header header&quot; &quot;sidebar main&quot; &quot;footer footer&quot;;gap:10px}.dashboard&gt;*{padding:22px;background:#eaf4f4;border:1px solid #457b9d}.header{grid-area:header}.sidebar{grid-area:sidebar}.main{grid-area:main;min-height:160px}.footer{grid-area:footer}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;&lt;div class=&quot;dashboard&quot;&gt;&lt;header class=&quot;header&quot;&gt;Header&lt;/header&gt;&lt;aside class=&quot;sidebar&quot;&gt;Sidebar&lt;/aside&gt;&lt;main class=&quot;main&quot;&gt;Main area&lt;/main&gt;&lt;footer class=&quot;footer&quot;&gt;Footer&lt;/footer&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> Header spans the top, sidebar is on the left, main is on the right and footer spans the bottom.</div>
+  <p class="meta"><strong>Result:</strong> A dashboard layout was built using named grid areas.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is grid-template-areas?</li><li>How do you make an area span columns?</li><li>What does 1fr represent?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 14</footer>
+</body></html>

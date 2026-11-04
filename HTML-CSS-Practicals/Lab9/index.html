@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 9 - Tables With Headers And Footers</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">HTML &amp; CSS Practical Record</div><h1>Lab 09: Tables With Headers And Footers</h1><p>Practical tasks, programs, expected outputs and viva questions</p></div></header>
+<main>
+<div class="intro"><strong>Experiment No. 9</strong><br>Complete the tasks below in order. Read the aim and procedure, study the program, and verify the expected output in your browser.</div>
+
+<section class="task">
+  <span class="tag">Task 1</span>
+  <h2>Create a marks table with header and body</h2>
+  <p class="meta"><strong>Aim:</strong> To create a captioned table with a header and three student records.</p>
+  <p class="meta"><strong>Theory:</strong> The table element represents tabular data. Caption describes the table; thead groups headings and tbody groups data rows.</p>
+  <p class="meta"><strong>Procedure:</strong> e Create a caption; add Name, Maths and Science headings; add the three specified rows.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Class Marks&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&lt;caption&gt;Marks of Class A&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Maths&lt;/th&gt;&lt;th&gt;Science&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Asha&lt;/td&gt;&lt;td&gt;78&lt;/td&gt;&lt;td&gt;85&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Rohan&lt;/td&gt;&lt;td&gt;64&lt;/td&gt;&lt;td&gt;70&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Neha&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> A table appears with a caption, three column headings and three student rows.</div>
+  <p class="meta"><strong>Result:</strong> The marks table was created with thead and tbody.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What is caption used for?</li><li>What is thead?</li><li>What is tbody?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 2</span>
+  <h2>Add a table footer with class averages</h2>
+  <p class="meta"><strong>Aim:</strong> To create a marks table for Asha and Rohan and calculate the subject averages in tfoot.</p>
+  <p class="meta"><strong>Theory:</strong> The tfoot element groups summary rows. Average is calculated as sum of values divided by the number of values. Maths average=(78+64)/2=71; Science average=(85+70)/2=77.5.</p>
+  <p class="meta"><strong>Procedure:</strong> e Use the same caption and headings; add Asha and Rohan; add a footer row containing the calculated averages.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Marks Average&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&lt;caption&gt;Marks of Class A&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Maths&lt;/th&gt;&lt;th&gt;Science&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Asha&lt;/td&gt;&lt;td&gt;78&lt;/td&gt;&lt;td&gt;85&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Rohan&lt;/td&gt;&lt;td&gt;64&lt;/td&gt;&lt;td&gt;70&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;th&gt;Class average&lt;/th&gt;&lt;td&gt;71&lt;/td&gt;&lt;td&gt;77.5&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The footer displays Maths average 71 and Science average 77.5.</div>
+  <p class="meta"><strong>Result:</strong> The table footer and correct class averages were added.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>How is an average calculated?</li><li>What is tfoot?</li><li>Why separate table sections?</li></ul>
+</section>
+<section class="task">
+  <span class="tag">Task 3</span>
+  <h2>Add scope attributes to table headers</h2>
+  <p class="meta"><strong>Aim:</strong> To improve table accessibility using scope=&quot;col&quot; and scope=&quot;row&quot;.</p>
+  <p class="meta"><strong>Theory:</strong> The scope attribute indicates whether a header applies to a row or column, helping assistive technologies interpret table relationships.</p>
+  <p class="meta"><strong>Procedure:</strong> e Add scope=&quot;col&quot; to each column header and scope=&quot;row&quot; to each student-name header cell.</p>
+  <h3>Program / Commands</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Accessible Marks&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&lt;caption&gt;Marks of Class A&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Maths&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Science&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Asha&lt;/th&gt;&lt;td&gt;78&lt;/td&gt;&lt;td&gt;85&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Rohan&lt;/th&gt;&lt;td&gt;64&lt;/td&gt;&lt;td&gt;70&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+  <div class="output"><strong>Expected output:</strong> The table looks like a standard marks table; header cells carry the requested scope attributes.</div>
+  <p class="meta"><strong>Result:</strong> Scope attributes were added to improve table accessibility.</p>
+  <h3>Viva-Voce Questions</h3><ul><li>What does scope=&quot;col&quot; mean?</li><li>What does scope=&quot;row&quot; mean?</li><li>How does scope help screen readers?</li></ul>
+</section>
+</main>
+<footer>HTML &amp; CSS Lab Practical Record · Lab 09</footer>
+</body></html>
